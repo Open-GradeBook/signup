@@ -1,0 +1,129 @@
+/* Basic Dark Mode CSS Theme */
+
+body {
+    background-color: #DCE8F1; /* Dark background */
+    color: #223D60; /* Light text */
+    font-family: Arial, sans-serif; /* Optional: font style */
+}
+
+a {
+    color: #bb86fc; /* Light purple for links */
+}
+
+a:hover {
+    color: #3700B3; /* Darker purple on hover */
+}
+
+header, footer {
+    background-color: #1f1f1f; /* Slightly lighter than body background */
+    color: #e0e0e0; /* Slightly darker than body text */
+}
+
+/* button {
+    background-color: #333333; /* Dark gray */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+/* } */
+ */
+button:hover {
+    background-color: #555555; /* Lighter gray on hover */
+}
+
+/* Add more styles as needed */
+img{
+  border-radius:50%;
+  size:50%;
+}
+.content{
+  margin-right: 5em;
+  margin-left: 5em;
+}
+
+#button button {
+    /* Button styling */
+    padding: 10px 20px;
+    background-color: #223D60; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#button button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+/* cool button code from  https://alvarotrigo.com/blog/10-cool-css-animations-to-add-to-your-website/*/
+
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #223D60;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #223D60
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #223D60;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
